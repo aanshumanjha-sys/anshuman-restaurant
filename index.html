@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anshuman Restaurant – Multi-Cuisine Dining in Madhubani | Near R.K. College</title>
+<meta name="description" content="Anshuman Restaurant, Madhubani (near R.K. College). Punjabi, Tandoor, Chinese, Biryani, South Indian, Fast Food and more. Mutton Thali at just ₹170. Open daily 8 AM – 12 AM.">
+<style>
+  :root{
+    --ink:#17110d; --panel:#211812; --line:#3a2b20;
+    --gold:#e8b04a; --gold2:#f6d58f; --ember:#c8412b;
+    --cream:#fbf3e4; --muted:#bfae98; --wa:#25d366;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;background:var(--ink);color:var(--cream);line-height:1.6;padding-bottom:78px}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 18px}
+  .serif{font-family:Georgia,"Times New Roman",serif}
+
+  /* Top nav */
+  nav{position:sticky;top:0;z-index:20;background:rgba(23,17,13,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+  .logo{font-family:Georgia,serif;font-weight:700;font-size:19px;letter-spacing:.5px}
+  .logo span{color:var(--gold)}
+  nav ul{display:flex;gap:20px;list-style:none;font-size:14px;color:var(--muted)}
+  @media(max-width:640px){nav ul{display:none}}
+
+  /* Hero */
+  .hero{position:relative;text-align:center;padding:72px 18px 84px;background:
+    radial-gradient(circle at 50% 0%,rgba(232,176,74,.22),transparent 55%),
+    radial-gradient(circle at 85% 90%,rgba(200,65,43,.25),transparent 45%),var(--ink)}
+  .eyebrow{display:inline-block;color:var(--gold);border:1px solid var(--gold);border-radius:99px;padding:6px 16px;font-size:12.5px;letter-spacing:2px;text-transform:uppercase;margin-bottom:22px}
+  h1{font-family:Georgia,serif;font-size:clamp(42px,11vw,84px);line-height:1.04;font-weight:700}
+  h1 em{font-style:normal;background:linear-gradient(90deg,var(--gold2),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .tagline{font-family:Georgia,serif;font-style:italic;font-size:clamp(18px,4.6vw,26px);color:var(--gold2);margin:16px 0 10px}
+  .lead{max-width:560px;margin:0 auto 30px;color:var(--muted);font-size:17px}
+  .btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:99px;font-weight:700;font-size:15.5px;border:0;cursor:pointer;transition:transform .15s,box-shadow .15s}
+  .btn:active{transform:scale(.97)}
+  .b-gold{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#2a1a05;box-shadow:0 8px 24px rgba(232,176,74,.28)}
+  .b-wa{background:var(--wa);color:#fff;box-shadow:0 8px 24px rgba(37,211,102,.25)}
+  .b-line{border:1.5px solid var(--cream);color:var(--cream);background:transparent}
+  .meta{display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:center;margin-top:34px;color:var(--muted);font-size:14.5px}
+  .meta b{color:var(--cream)}
+
+  /* Offer band */
+  .band{background:linear-gradient(90deg,#7e1f12,var(--ember),#7e1f12);text-align:center;padding:14px 14px;font-weight:600;letter-spacing:.3px}
+  .band b{color:var(--gold2)}
+  .band span{opacity:.6;margin:0 10px}
+
+  section{padding:64px 0}
+  .kicker{text-align:center;color:var(--gold);letter-spacing:3px;font-size:12.5px;text-transform:uppercase}
+  h2{font-family:Georgia,serif;text-align:center;font-size:clamp(28px,6vw,42px);margin:8px 0 10px;line-height:1.15}
+  .sub{text-align:center;color:var(--muted);max-width:560px;margin:0 auto 34px}
+
+  /* Signature offers */
+  .offers{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
+  .offer{position:relative;background:linear-gradient(160deg,#2a1d15,#1b130e);border:1px solid var(--line);border-radius:22px;padding:28px 24px;overflow:hidden}
+  .offer::before{content:"";position:absolute;right:-60px;top:-60px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(232,176,74,.25),transparent 70%)}
+  .offer .ico{font-size:44px}
+  .offer .label{color:var(--gold);font-size:12.5px;letter-spacing:2px;text-transform:uppercase;margin-top:6px}
+  .offer h3{font-family:Georgia,serif;font-size:26px;margin:4px 0 8px}
+  .offer .big{font-family:Georgia,serif;font-size:46px;font-weight:700;color:var(--gold2);line-height:1}
+  .offer .big small{font-size:15px;color:var(--muted);font-weight:400;font-family:"Segoe UI",sans-serif;margin-left:6px}
+  .offer ul{list-style:none;margin:14px 0 20px;color:var(--muted);font-size:15px}
+  .offer li{padding:3px 0}
+  .offer li::before{content:"✓";color:var(--gold);margin-right:9px;font-weight:700}
+
+  /* Menu */
+  .tabs{display:flex;gap:8px;overflow-x:auto;padding:2px 2px 16px;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{flex:0 0 auto;padding:9px 20px;border-radius:99px;border:1px solid var(--line);background:var(--panel);color:var(--muted);font-weight:600;font-size:14.5px;cursor:pointer;font-family:inherit}
+  .tab.active{background:var(--gold);color:#2a1a05;border-color:var(--gold)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+  .item{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:3px}
+  .item .e{font-size:30px}
+  .item h3{font-size:17px;font-weight:600}
+  .item p{color:var(--muted);font-size:14px}
+  .item .row{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:12px}
+  .item .rate{font-size:12.5px;color:var(--gold);letter-spacing:.3px}
+  .order{background:var(--wa);color:#fff;padding:7px 15px;border-radius:99px;font-weight:700;font-size:13.5px}
+  .hide{display:none}
+  .note{text-align:center;color:var(--muted);font-size:14px;margin-top:20px}
+
+  /* Why */
+  .why{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+  .why div{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px 20px}
+  .why .ico{font-size:30px}
+  .why h3{font-family:Georgia,serif;font-size:19px;margin:8px 0 4px;color:var(--gold2)}
+  .why p{color:var(--muted);font-size:14.5px}
+
+  /* Events */
+  .events{background:linear-gradient(135deg,#2c1b12,#1a110b);border:1px solid var(--line);border-radius:26px;padding:42px 24px;text-align:center}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:18px 0 24px}
+  .chips span{border:1px solid var(--line);background:var(--panel);padding:7px 16px;border-radius:99px;font-size:14px;color:var(--gold2)}
+
+  /* Contact */
+  .contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}
+  .box{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:26px}
+  .box dl{display:grid;gap:16px;margin-bottom:22px}
+  .box dt{color:var(--gold);font-size:12.5px;letter-spacing:2px;text-transform:uppercase}
+  .box dd{font-size:16px}
+  .box .btns{justify-content:flex-start}
+  iframe{width:100%;height:100%;min-height:330px;border:0;border-radius:22px;filter:grayscale(.15)}
+
+  footer{border-top:1px solid var(--line);text-align:center;padding:30px 18px;color:var(--muted);font-size:14px}
+  footer b{color:var(--gold2);font-family:Georgia,serif;font-size:18px;display:block;margin-bottom:4px}
+
+  .bar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;gap:8px;padding:10px;background:rgba(23,17,13,.97);border-top:1px solid var(--line)}
+  .bar a{flex:1;text-align:center;padding:13px 8px;border-radius:12px;font-weight:800;font-size:15px}
+  .bar .c{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#2a1a05}
+  .bar .w{background:var(--wa);color:#fff}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo">Anshuman <span>Restaurant</span></a>
+    <ul>
+      <li><a href="#offers">Offers</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <span class="eyebrow">Multi-Cuisine Restaurant • Madhubani</span>
+  <h1>Anshuman <em>Restaurant</em></h1>
+  <p class="tagline">Every craving, one table.</p>
+  <p class="lead">From smoky tandoor and rich Punjabi gravies to Chinese favourites, fragrant biryani and South Indian classics – freshly prepared, generously served.</p>
+  <div class="btns">
+    <a class="btn b-gold" href="tel:+917050091848">📞 Call to Order</a>
+    <a class="btn b-wa" href="#" data-wa="Hello! I would like to place an order at Anshuman Restaurant.">💬 Order on WhatsApp</a>
+    <a class="btn b-line" href="#menu">View Menu</a>
+  </div>
+  <div class="meta">
+    <span>📍 <b>Near R.K. College</b>, Madhubani</span>
+    <span>🕗 <b>Open daily</b> 8:00 AM – 12:00 AM</span>
+  </div>
+</header>
+
+<div class="band">Mutton Thali at just <b>₹170</b><span>•</span>Mutton Handi: <b>15% OFF</b> on a minimum bill of ₹300</div>
+
+<main>
+
+  <section id="offers">
+    <div class="wrap">
+      <p class="kicker">Signature Offers</p>
+      <h2>Our Guest Favourites</h2>
+      <p class="sub">Pure Khassi mutton, cooked slow and served fresh – at prices that make it an easy choice.</p>
+      <div class="offers">
+        <div class="offer">
+          <div class="ico">🍛</div>
+          <div class="label">Complete Meal</div>
+          <h3>Mutton Thali</h3>
+          <div class="big">₹170<small>only</small></div>
+          <ul>
+            <li>Mutton Curry (Pure Khassi Meat)</li>
+            <li>Steamed Rice</li>
+            <li>Fresh Salad</li>
+          </ul>
+          <a class="btn b-wa" href="#" data-wa="Hello! I would like to order the Mutton Thali (₹170). Quantity: ">💬 Order Mutton Thali</a>
+        </div>
+        <div class="offer">
+          <div class="ico">🍲</div>
+          <div class="label">Limited Offer</div>
+          <h3>Mutton Handi</h3>
+          <div class="big">15% OFF<small>min. bill ₹300</small></div>
+          <ul>
+            <li>Slow-cooked in a traditional handi</li>
+            <li>Rich, aromatic, full-bodied gravy</li>
+            <li>Best enjoyed with tandoori roti or naan</li>
+          </ul>
+          <a class="btn b-wa" href="#" data-wa="Hello! I would like to order the Mutton Handi (15% off on minimum bill of ₹300). Quantity: ">💬 Order Mutton Handi</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu" style="padding-top:20px">
+    <div class="wrap">
+      <p class="kicker">The Menu</p>
+      <h2>Something for Everyone</h2>
+      <p class="sub">Vegetarian and non-vegetarian dishes across every major cuisine. Tap “Order” on any dish to send us a ready-made WhatsApp message.</p>
+
+      <div class="tabs" id="tabs">
+        <button class="tab active" data-cat="all">All</button>
+        <button class="tab" data-cat="punjabi">Punjabi</button>
+        <button class="tab" data-cat="tandoor">Tandoor</button>
+        <button class="tab" data-cat="chinese">Chinese</button>
+        <button class="tab" data-cat="biryani">Biryani &amp; Rice</button>
+        <button class="tab" data-cat="south">South Indian</button>
+        <button class="tab" data-cat="fast">Fast Food</button>
+        <button class="tab" data-cat="snacks">Tea &amp; Snacks</button>
+        <button class="tab" data-cat="sweet">Desserts &amp; Drinks</button>
+      </div>
+
+      <div class="grid" id="grid"></div>
+      <p class="note">Rates for all other dishes are available on call or WhatsApp: +91 70500 91848</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="kicker">Why Anshuman</p>
+      <h2>Good Food, Done Properly</h2>
+      <p class="sub">The small things that bring guests back.</p>
+      <div class="why">
+        <div><div class="ico">🍽️</div><h3>Complete Variety</h3><p>Veg and non-veg across Punjabi, Chinese, Tandoor, Biryani, South Indian and fast food.</p></div>
+        <div><div class="ico">🔥</div><h3>Cooked Fresh</h3><p>Prepared to order and served hot, so every plate arrives the way it should.</p></div>
+        <div><div class="ico">👨‍👩‍👧‍👦</div><h3>Made for Groups</h3><p>Comfortable seating for families, friends, students and colleagues.</p></div>
+        <div><div class="ico">⏰</div><h3>Long Hours</h3><p>Open every day from 8:00 AM to 12:00 AM – breakfast through late dinner.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="events" style="padding-top:20px">
+    <div class="wrap">
+      <div class="events">
+        <p class="kicker">Parties &amp; Events</p>
+        <h2>Celebrate With Us</h2>
+        <p class="sub" style="margin-bottom:0">Birthdays, family functions, get-togethers and bulk orders – share your date and guest count and we will take care of the rest.</p>
+        <div class="chips"><span>Birthdays</span><span>Family Functions</span><span>Friends &amp; Student Parties</span><span>Office Get-togethers</span><span>Bulk Orders</span></div>
+        <a class="btn b-gold" href="#" data-wa="Hello! I would like to enquire about a party / event booking at Anshuman Restaurant. Date: , Number of guests: ">Enquire About Booking</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="padding-top:20px">
+    <div class="wrap">
+      <p class="kicker">Visit Us</p>
+      <h2>Find Anshuman Restaurant</h2>
+      <p class="sub">Right by R.K. College in Madhubani – easy to reach, easy to enjoy.</p>
+      <div class="contact">
+        <div class="box">
+          <dl>
+            <div><dt>Address</dt><dd>Anshuman Restaurant<br>Near R.K. College, Madhubani, Bihar</dd></div>
+            <div><dt>Opening Hours</dt><dd>Every day, 8:00 AM – 12:00 AM</dd></div>
+            <div><dt>Phone / WhatsApp</dt><dd><a href="tel:+917050091848">+91 70500 91848</a></dd></div>
+          </dl>
+          <div class="btns">
+            <a class="btn b-gold" href="tel:+917050091848">📞 Call Now</a>
+            <a class="btn b-wa" href="#" data-wa="Hello! I would like to know more about Anshuman Restaurant.">💬 WhatsApp</a>
+            <a class="btn b-line" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=RK+College+Madhubani+Bihar">🧭 Get Directions</a>
+          </div>
+        </div>
+        <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=RK+College+Madhubani+Bihar&output=embed"
+          title="Anshuman Restaurant – near R.K. College, Madhubani"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <b>Anshuman Restaurant</b>
+  Near R.K. College, Madhubani, Bihar • +91 70500 91848<br>
+  © Anshuman Restaurant. All rights reserved.
+</footer>
+
+<div class="bar">
+  <a class="c" href="tel:+917050091848">📞 Call</a>
+  <a class="w" href="#" data-wa="Hello! I would like to place an order at Anshuman Restaurant.">💬 WhatsApp</a>
+</div>
+
+<script>
+  var WA_NUMBER = "917050091848";
+
+  // [emoji, name, description, category, rate-label]
+  var items = [
+    ["🍛","Mutton Thali","Mutton curry (pure Khassi meat), steamed rice, salad","punjabi","₹170"],
+    ["🍲","Mutton Handi","Slow-cooked traditional handi – 15% off on min. bill ₹300","punjabi","15% OFF"],
+    ["🧀","Paneer Butter Masala","Creamy tomato-butter gravy","punjabi",""],
+    ["🥘","Kadhai Paneer","Peppers and freshly ground spices","punjabi",""],
+    ["🍲","Dal Fry / Dal Tadka","Slow-simmered lentils, finished with a tempering","punjabi",""],
+    ["🥣","Mixed Vegetable","Seasonal vegetables in a spiced gravy","punjabi",""],
+    ["🍗","Chicken Curry / Butter Chicken","Rich, flavourful non-veg gravies","punjabi",""],
+    ["🫓","Roti, Naan &amp; Paratha","Tandoori roti, butter naan, lachha paratha","punjabi",""],
+
+    ["🍢","Paneer Tikka","Marinated and char-grilled in the tandoor","tandoor",""],
+    ["🍗","Chicken Tikka / Tandoori Chicken","Smoky, juicy and well spiced","tandoor",""],
+    ["🍡","Seekh Kebab","Spiced minced-meat kebabs","tandoor",""],
+    ["🥦","Veg Kebab","A flavourful vegetarian grill option","tandoor",""],
+
+    ["🍜","Chowmein","Veg, egg and chicken","chinese",""],
+    ["🍚","Fried Rice","Veg, egg and chicken","chinese",""],
+    ["🥟","Momos","Steamed or fried, with spicy chutney","chinese",""],
+    ["🌶️","Chilli Paneer / Chilli Chicken","Dry or gravy","chinese",""],
+    ["🍲","Manchurian","Veg and chicken","chinese",""],
+    ["🥣","Soups","Manchow, sweet corn, tomato","chinese",""],
+
+    ["🍛","Chicken Biryani","Fragrant basmati rice with tender chicken","biryani",""],
+    ["🍛","Veg Biryani / Pulao","Mild spices, aromatic rice","biryani",""],
+    ["🍚","Jeera Rice / Plain Rice","The perfect side for any curry","biryani",""],
+    ["🍱","Thali","Roti, rice, dal, sabzi and salad","biryani",""],
+
+    ["🥞","Dosa","Plain, masala and paneer dosa","south",""],
+    ["⚪","Idli Sambar","Soft idlis with hot sambar and chutney","south",""],
+    ["🍩","Medu Vada","Crisp outside, soft inside","south",""],
+    ["🥞","Uttapam","Onion-tomato uttapam","south",""],
+
+    ["🍔","Burgers","Veg and chicken","fast",""],
+    ["🍕","Pizza","Cheesy, with a choice of toppings","fast",""],
+    ["🥪","Sandwiches","Grilled and veg","fast",""],
+    ["🌯","Rolls &amp; Frankies","Paneer, egg and chicken","fast",""],
+    ["🍟","French Fries","Crisp, golden and salted","fast",""],
+
+    ["☕","Tea &amp; Coffee","Strong ginger chai and hot coffee","snacks",""],
+    ["🥟","Samosa / Kachori","Served hot","snacks",""],
+    ["🍞","Bread Pakora / Pakoras","The classic chai companion","snacks",""],
+    ["🍳","Omelette / Egg Bhurji","With paratha or bread","snacks",""],
+    ["🥔","Aloo Paratha / Chole Bhature","A hearty desi breakfast","snacks",""],
+
+    ["🍨","Ice Cream","A range of flavours","sweet",""],
+    ["🍮","Gulab Jamun / Rasmalai","A sweet finish to the meal","sweet",""],
+    ["🥤","Lassi / Milkshakes","Chilled and creamy","sweet",""],
+    ["🍋","Fresh Lime / Cold Drinks","Cool and refreshing","sweet",""]
+  ];
+
+  var grid = document.getElementById("grid");
+  grid.innerHTML = items.map(function(i){
+    var plain = i[1].replace(/&amp;/g,"&");
+    var rate = i[4] ? i[4] : "Rate on request";
+    return '<div class="item" data-cat="'+i[3]+'"><div class="e">'+i[0]+'</div><h3>'+i[1]+'</h3><p>'+i[2]+'</p>'+
+      '<div class="row"><span class="rate">'+rate+'</span>'+
+      '<a class="order" href="#" data-wa="Hello! I would like to order '+plain+' from Anshuman Restaurant. Quantity: ">Order</a></div></div>';
+  }).join("");
+
+  document.getElementById("tabs").addEventListener("click", function(ev){
+    var t = ev.target.closest(".tab"); if(!t) return;
+    document.querySelectorAll(".tab").forEach(function(x){x.classList.remove("active")});
+    t.classList.add("active");
+    var cat = t.getAttribute("data-cat");
+    document.querySelectorAll(".item").forEach(function(c){
+      c.classList.toggle("hide", cat!=="all" && c.getAttribute("data-cat")!==cat);
+    });
+  });
+
+  document.addEventListener("click", function(ev){
+    var a = ev.target.closest("[data-wa]"); if(!a) return;
+    ev.preventDefault();
+    window.open("https://wa.me/"+WA_NUMBER+"?text="+encodeURIComponent(a.getAttribute("data-wa")), "_blank");
+  });
+</script>
+</body>
+</html>
